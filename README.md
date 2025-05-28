@@ -11,12 +11,11 @@ Installation
 
 2. Install dependencies:  npm install
 
-3. Create a .env file in the root directory and add your API key:  REACT_APP_OPENWEATHER_API_KEY = 5c4f87a04fc3f0cd7ec91a5689317abf
+3. Start the development server:  npm run dev
 
-4. Start the development server:  npm start
+4. Open your browser to:  http://localhost:5173
 
-5. Open your browser to:  http://localhost:3000
-
+API_KEY = 5c4f87a04fc3f0cd7ec91a5689317abf
 
 Key Features:  
    Current weather conditions with visual icons
@@ -58,30 +57,3 @@ Technical Approach
    Optimized API calls with caching
    Implemented lazy loading for components
    Used memoization where appropriate
-
-Project Structure
-
-weather-dashboard/
-├── src/
-│   ├── components/
-│   │   ├── SearchBar/
-│   │   │   ├── SearchBar.jsx
-│   │   │   └── SearchBar.module.css
-│   │   ├── WeatherDisplay/
-│   │   │   ├── WeatherDisplay.jsx
-│   │   │   └── WeatherDisplay.module.css
-│   │   ├── Forecast/
-│   │   │   ├── Forecast.jsx
-│   │   │   └── Forecast.module.css
-│   │   └── ErrorDisplay/
-│   │       ├── ErrorDisplay.jsx
-│   │       └── ErrorDisplay.module.css
-│   ├── context/
-│   │   └── WeatherContext.js
-│   ├── hooks/
-│   │   └── useWeather.js
-│   ├── App.js
-│   ├── App.module.css
-│   └── index.js
-├── package.json
-└── README.md
