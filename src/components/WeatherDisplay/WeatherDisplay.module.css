@@ -1,0 +1,235 @@
+.weatherContainer {
+  background: linear-gradient(135deg, #9deaee 0%, #cddcff 100%);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.weatherContainer:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.weatherHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cityName {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.dateTime {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #171818;
+  font-size: 0.9rem;
+}
+
+.weatherMain {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.weatherIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+}
+
+.weatherImage {
+  width: 140px;
+  height: 140px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.weatherDescription {
+  margin: 0.5rem 0 0 0;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.weatherDetails {
+  flex-grow: 1;
+}
+
+.temperatureContainer {
+  margin-bottom: 1.5rem;
+}
+
+.temperature {
+  font-size: 4.5rem;
+  margin: 0;
+  font-weight: 300;
+  color: #2c3e50;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.temperatureUnit {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+}
+
+.temperatureRange {
+  display: flex;
+  gap: 1rem;
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.weatherStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.weatherStat {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.weatherStat:hover {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  width: 24px;
+  height: 24px;
+  color: #3498db;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: #7f8c8d;
+  margin-bottom: 0.2rem;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.loadingSpinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.noData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.noDataIcon {
+  width: 60px;
+  height: 60px;
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+}
+
+.noDataSubtext {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .weatherMain {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .weatherHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .dateTime {
+    align-items: flex-start;
+  }
+  
+  .temperature {
+    font-size: 3.5rem;
+  }
+  
+  .weatherStats {
+    grid-template-columns:1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .weatherContainer {
+    padding: 1.5rem;
+  }
+  
+  .weatherStats {
+    grid-template-columns:1fr 1fr;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+  }
+  
+  .weatherImage {
+    width: 120px;
+    height: 120px;
+  }
+}

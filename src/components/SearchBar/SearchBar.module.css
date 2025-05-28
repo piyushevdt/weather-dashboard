@@ -1,0 +1,113 @@
+.searchForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.searchContainer.focused {
+  border-color: #3498db;
+  box-shadow: 0 4px 25px rgba(52, 152, 219, 0.3);
+}
+
+.locationIcon {
+  margin-left: 1.2rem;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+  color: #2c3e50;
+  padding-left: 0.8rem;
+}
+
+.searchInput::placeholder {
+  color: #95a5a6;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+   background-position: left;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin: 0.3rem;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.4);
+  transition: 
+    background-position 0.5s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.searchButton:hover {
+  background-position: right;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.5);
+}
+
+.searchButton:active {
+  transform: translateY(0);
+}
+
+.searchIcon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .searchButton span {
+    display: none;
+  }
+  
+  .searchButton {
+    padding: 0.9rem;
+  }
+  
+  .searchIcon {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchContainer {
+    border-radius: 30px;
+  }
+  
+  .locationIcon {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .searchInput {
+    padding: 0.9rem;
+    padding-left: 0.1rem;
+    font-size: 0.95rem;
+  }
+}
